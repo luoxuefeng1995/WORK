@@ -1,0 +1,17 @@
+爬取搜房网的新房和二手房
+
+分析各个网址的规则：
+
+    1.获取所有城市的url链接
+        https://www.fang.com/Soufunfamily.htm
+    2.获取所有城市的新房url链接
+        例：c成都：http://chengdu.fang.com/
+        成都新房：http://newhouse.chengdu.fang.com/house/s/
+    3.获取所有城市的二手房的url
+        例：成都：http://chengdu.fang.com/
+        成都二手房：http://esf.chengdu.fang.com/
+
+     北京是个例外：
+        北京的新房链接：http://newhouse.fang.com/house/s/
+
+        北京的二手房链接：http://esf.fang.com
