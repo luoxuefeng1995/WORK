@@ -6,8 +6,8 @@ from ..items import NewHouseItem, EsfHouseItem
 class SfwSpiderSpider(scrapy.Spider):
     name = 'sfw_spider'
     # allowed_domains = ['ddddd']
-    start_urls = ['https://www.fang.com/SoufunFamily.htm']
-
+    # start_urls = ['https://www.fang.com/SoufunFamily.htm']
+    redis_key = "sfw:start_url"
     def parse(self, response):
         trs = response.xpath('//div[@id="c02"]//tr')
         province = None
@@ -41,8 +41,7 @@ class SfwSpiderSpider(scrapy.Spider):
                 # print("二手房链接：%s"%esf_url)
                 yield scrapy.Request(url=newhouse_url, callback=self.parse_newhouse, meta={'meta': (province, city)})
                 yield scrapy.Request(url=esf_url, callback=self.parse_esfhouse, meta={'meta': (province, city)})
-                break
-            break
+
     def parse_newhouse(self, response):
         province, city = response.meta.get('meta')
         lis = response.xpath('//div[contains(@class, "nl_con")]/ul/li')
