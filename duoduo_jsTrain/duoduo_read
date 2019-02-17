@@ -1,0 +1,15 @@
+Location: https://account.sogo.com/redirect
+?data=%7B%22data%22%3A%7B%22ru%22%3A%22https%3A%2F%2Faccount.sogou.com%22%2C%22xd%22%3A%22https%3A%2F%2Fxs.sogou.com%2Fstatic%2Fjump.html%22%2C%22
+userid%22%3A%2218382663147%40sohu.com%22%7D%2C%22status%22%3A%220%22%2C%22statusText%22%3A%22%22%7D
+&cookieToken=e195962796414c0e8d6678e9de7be858
+&flag=SET
+
+
+{"data":{"ru":"https://account.sogou.com","xd":"https://xs.sogou.com/static/jump.html","userid":"18382663147@sohu.com"},"status":"0","statusText":""}
+
+{"data":{"ru":"https://account.sogou.com","xd":"https://xs.sogou.com/static/jump.html","userid":"18382663147@sohu.com"},"status":"0","statusText":""}
+cookieToken	e195962796414c0e8d6678e9de7be858
+flag	SET
+
+
+Math.floor(65536 * (1 + Math.random())).toString(16).substring(1)
