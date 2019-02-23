@@ -44,7 +44,7 @@ class BossSpider(CrawlSpider):
             yield scrapy.Request(url=job_detail_url, callback=self.discription, meta={'meta': (job_classify, job_name, job_salary, job_city, job_edu, job_experience)})
         page_nexturl = response.xpath('//div[@class="page"]/a[@class="next"]/@href').extract_first()
         if page_nexturl:
-            page_nexturl = self.start_urls[0].join(page_nexturl)
+            page_nexturl = self.start_urls[0] + page_nexturl
             yield scrapy.Request(page_nexturl, callback=self.parse_step01)
 
     def discription(self, response):
